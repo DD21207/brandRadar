@@ -1,0 +1,186 @@
+<template>
+	<div id="div_body">
+		<div class="o-grid">
+            <div class="o-grid-cell admin-title">
+                <img src="../assets/img/20180716_16.png" alt="" width="280px">
+            </div>
+            <div class="o-grid-cell--rev">
+                <a href="javascript:;;" class="admin-link-bfapp" @click="gotoHome">Back to Home</a>
+                <span class="admin-link-sep">|</span>
+                <a href="javascript:;;;" class="main-content__header-login" @click="logout">Logout x</a>
+            </div>
+        </div>
+        <div class="content_div">
+        	<div class="content_header">
+        		<div class="o-grid-cell">
+        			<a class="admin-section-link is-active" href="javascript:;;" id="bf-create">Create a new corpus</a>
+        		</div>
+        	</div>
+        	<div class="content_main">
+        		<div>
+                    <div>
+                        <label>Campaign Name:</label>
+                        <el-input v-model="campaignName" placeholder="Enter name here" name="campaign"></el-input>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <label >Website:</label><br>
+                        <el-select v-model="websiteSelect" multiple collapse-tags placeholder="Select" filterable>
+                        <el-option
+                          v-for="item in websiteData"
+                          :key="item.name"
+                          :label="item.name"
+                          :value="item.name">
+                        </el-option>
+                      </el-select>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <label >City:</label><br>
+                        <el-select v-model="citySelect" multiple collapse-tags placeholder="Select" filterable>
+                        <el-option
+                          v-for="item in cityData"
+                          :key="item.name"
+                          :label="item.name"
+                          :value="item.name">
+                        </el-option>
+                      </el-select>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label >Start Date:</label><br>
+                        <el-date-picker
+                          v-model="startDate"
+                          type="date"
+                          value-format="yyyy-MM-dd"
+                          placeholder="Start Date">
+                        </el-date-picker>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <label>End Date:</label><br>
+                        <el-date-picker
+                          v-model="endDate"
+                          type="date"
+                          value-format="yyyy-MM-dd"
+                          placeholder="End Date">
+                        </el-date-picker>
+                    </div>
+                </div>
+        	</div>
+            <div class="content_main2"> 
+                <label>Keyword Query:</label><br>
+                <el-input
+                  type="textarea"
+                  :autosize="{ minRows: 4}"
+                  placeholder="Description"
+                  v-model="keywords">
+                </el-input>
+            </div>
+           <!--  <div class="tips_box">
+              <p>please note that keywords format only accept:</p>
+              <p>A</p>
+              <p>A or B or C</p>
+              <p>A and B and C</p>
+              <p>(A or B) and C</p>
+              <p>A and (B or C)</p>
+              <p>(A or B) and (C or D)</p>
+            </div> -->
+            <div class="btn_div">
+                <div class="VALIDATE_btn" @click="validate">
+                    VALIDATE
+                </div>
+            </div>
+
+        </div>
+	</div>
+</template>
+
+
+<script>
+import url from '../assets/js/url.js'
+
+export default {
+	name:'admin',
+	data(){
+		return {
+            campaignName:"",
+            startDate:"",
+            endDate:"",
+            websiteData:[],
+            websiteSelect:"",
+            cityData:[],
+            citySelect:"",
+            keywords:""
+		}
+	},
+	mounted(){
+		this.$nextTick(function(){
+			this.load()
+		});
+	},
+	methods:{
+		load(){
+          this.$http({
+              method:'get',
+              url:'http://ec2-52-83-199-126.cn-northwest-1.compute.amazonaws.com.cn:8080/socialcrawler/json/optionList.json',
+              // data:this.selectData1,
+          }).then(response =>{
+              this.websiteData = response.data.data.website;
+              this.cityData = response.data.data.city;
+          })
+		},
+    validate(){
+      var ajaxData = {};
+      ajaxData.parentId = this.$route.query.parentId;
+      ajaxData.campaignName = this.campaignName;
+      ajaxData.filter = {};
+      ajaxData.filter.startDate = this.startDate;
+      ajaxData.filter.endDate = this.endDate;
+      ajaxData.filter.keywords = this.keywords;
+      ajaxData.filter.website = this.websiteSelect.join(";");
+      ajaxData.filter.city = this.citySelect.join(";");
+
+      this.$http({
+            method:'post',
+            url:url.url+'/socialcrawler/mission/add.do',
+            data:ajaxData
+        }).then(response =>{
+          if(response.data.status == 0){
+              this.$message({
+                type: 'success',
+                message: "Save Successful!"
+              });
+              this.$router.push('/home')
+      
+          }else{
+               this.$message({
+                type: 'info',
+                message: "Save Failed!"
+              });
+          }
+        })
+    },
+    logout(){
+      this.$http({
+          method:'post',
+          url:url.url+'/dtiusercenter/logout.do',
+      }).then(response =>{
+        if(response.data.status == 0){
+            this.$router.push('/')
+    
+        }
+      })
+    },
+    gotoHome(){
+      this.$router.push('/home');
+    }
+	}
+
+}	
+</script>
+
+<style scoped lang="less">
+@import '../assets/less/admin.less';
+@import '../assets/less/scrollBar.less';
+
+
+</style>

@@ -1,0 +1,203 @@
+@min_color: #e91f63;
+@background_div: rgba(29, 29, 29, 0.9);
+@bg_color: #191919;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: @bg_color;
+}
+
+#div_body {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+  padding: 30px 0;
+  background: @bg_color;
+}
+
+.o-grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+
+  .admin-title {
+    color: #fff;
+    font-size: 22px;
+    line-height: 44px;
+    padding-left: 30px;
+  }
+  .o-grid-cell {
+    flex: 1;
+    align-items: stretch;
+  }
+  .o-grid-cell--rev {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+  }
+  .admin-link-bfapp {
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.71429;
+
+    transition: all ease-out .2s; // background: url(../img/ic-tool-close-grey.svg) right center/8px no-repeat;
+    color: white;
+    font-style: italic;
+    line-height: 42px;
+    text-align: right;
+    text-decoration: none;
+    &:hover {
+      font-size: 20px;
+      color: white;
+    }
+  }
+  .admin-link-sep {
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.71429;
+    padding-right:10px;
+    padding-left: 10px;
+    transition: all ease-out .2s; // background: url(../img/ic-tool-close-grey.svg) right center/8px no-repeat;
+    color: white;
+    font-style: italic;
+    line-height: 42px;
+    text-align: right;
+    text-decoration: none;
+  }
+  .main-content__header-login {
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.71429;
+    padding-right: 16px;
+    margin-right: 15px;
+    transition: all ease-out .2s; // background: url(../img/ic-tool-close-grey.svg) right center/8px no-repeat;
+    color: white;
+    font-style: italic;
+    line-height: 42px;
+    text-align: right;
+    text-decoration: none;
+    #logout_btn {
+      margin-left: 5px;
+      font-size: 22px;
+    }
+    &:hover {
+      font-size: 20px;
+      color: white;
+    }
+  }
+}
+
+
+.content_div {
+  list-style: none;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+  .content_header {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    padding-left: 30px;
+    .o-grid-cell {
+      // flex: 1;
+      align-items: stretch;
+      .is-active {
+        color: #fff !important;
+        background-color: @min_color !important;
+      }
+      .admin-section-link {
+        width: 250px;
+        display: block;
+        height: 44px;
+        margin: 20px 5px;
+        padding: 0 22px;
+        text-align: center;
+        font-size: 16px;
+        transition: all ease .3s;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 500;
+        line-height: 44px;
+        text-decoration: none;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.1);
+        &:hover {
+          color: #fff;
+          background-color: @min_color;
+        }
+      }
+    }
+  }
+  .content_main {
+    width: 100%;
+    height: auto;
+    padding: 0 30px;
+    display: flex;
+    margin-bottom: 20px;
+    >div {
+      flex: 1;
+      min-height: 300px;
+      padding: 10px 10px;
+      label {
+        color: @min_color;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .content_main2 {
+    width: 100%;
+    height: auto;
+    padding: 0 40px;
+    label {
+      color: @min_color;
+      font-size: 16px;
+    }
+  }
+
+  .tips_box {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 40px;
+    >p {
+      margin: 0;
+      color: grey;
+      font-family: "Roboto", sans-serif !important;
+      font-size: 11px;
+      font-style: italic;
+    }
+  }
+  .btn_div {
+    width: 100%;
+    height: 44px;
+    margin-top: 20px;
+    padding: 0 40px;
+    .VALIDATE_btn {
+      float: right;
+      height: 44px;
+      line-height: 44px;
+      padding: 0px 25px;
+      transition: all ease .3s;
+      color: #9a0029;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 4px;
+      background: @min_color;
+    }
+  }
+}

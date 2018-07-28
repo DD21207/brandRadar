@@ -1,0 +1,2033 @@
+{
+
+  "data": [
+  {
+    "crawler_id": 100001,
+    "word": "不错",
+    "frequency": 353,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "非常",
+    "frequency": 154,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "感觉",
+    "frequency": 123,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "京东",
+    "frequency": 118,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "东西",
+    "frequency": 115,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "牙刷",
+    "frequency": 114,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "干净",
+    "frequency": 106,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "活动",
+    "frequency": 90,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "喜欢",
+    "frequency": 89,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "电动牙刷",
+    "frequency": 85,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "没有",
+    "frequency": 84,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "使用",
+    "frequency": 78,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "包装",
+    "frequency": 67,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "刷牙",
+    "frequency": 66,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "效果",
+    "frequency": 64,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "质量",
+    "frequency": 63,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "满意",
+    "frequency": 61,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "物流",
+    "frequency": 59,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一个",
+    "frequency": 58,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "价格",
+    "frequency": 55,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "好用",
+    "frequency": 52,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "购买",
+    "frequency": 51,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "买一送一",
+    "frequency": 51,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一直",
+    "frequency": 50,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "第一次",
+    "frequency": 48,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "划算",
+    "frequency": 47,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "产品",
+    "frequency": 47,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "值得",
+    "frequency": 47,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "牙齿",
+    "frequency": 47,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "比较",
+    "frequency": 45,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "真的",
+    "frequency": 45,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "很快",
+    "frequency": 43,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "方便",
+    "frequency": 43,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "充电",
+    "frequency": 42,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "评价",
+    "frequency": 41,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "飞利浦",
+    "frequency": 41,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "有点",
+    "frequency": 40,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "速度",
+    "frequency": 39,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一次",
+    "frequency": 38,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "确实",
+    "frequency": 38,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "之前",
+    "frequency": 38,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "功能",
+    "frequency": 38,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "送货",
+    "frequency": 37,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "赠品",
+    "frequency": 37,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "好评",
+    "frequency": 36,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "很多",
+    "frequency": 35,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "旅行",
+    "frequency": 35,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "刷头",
+    "frequency": 35,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "觉得",
+    "frequency": 34,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "蓝牙",
+    "frequency": 34,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "高大",
+    "frequency": 33,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "声音",
+    "frequency": 32,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "购物",
+    "frequency": 31,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "希望",
+    "frequency": 31,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "起来",
+    "frequency": 30,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "这次",
+    "frequency": 29,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "收到",
+    "frequency": 28,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "双十",
+    "frequency": 28,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "实惠",
+    "frequency": 27,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一赠",
+    "frequency": 26,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "特别",
+    "frequency": 26,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "不是",
+    "frequency": 25,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "力度",
+    "frequency": 25,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一下",
+    "frequency": 25,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "好看",
+    "frequency": 24,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "品牌",
+    "frequency": 24,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "博朗",
+    "frequency": 24,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "超级",
+    "frequency": 23,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "现在",
+    "frequency": 23,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "快递",
+    "frequency": 23,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "知道",
+    "frequency": 23,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "问题",
+    "frequency": 23,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "模式",
+    "frequency": 23,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "黑色",
+    "frequency": 23,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "性价比",
+    "frequency": 22,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "震动",
+    "frequency": 22,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "两个",
+    "frequency": 22,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "便宜",
+    "frequency": 22,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "习惯",
+    "frequency": 21,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "做工",
+    "frequency": 21,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "已经",
+    "frequency": 21,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "应该",
+    "frequency": 21,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "商品",
+    "frequency": 20,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "服务",
+    "frequency": 20,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "宝贝",
+    "frequency": 19,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "好好",
+    "frequency": 19,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一段时间",
+    "frequency": 19,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "推荐",
+    "frequency": 19,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "清洁",
+    "frequency": 19,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "实用",
+    "frequency": 18,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "以后",
+    "frequency": 18,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "体验",
+    "frequency": 18,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "颜色",
+    "frequency": 18,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "没用",
+    "frequency": 18,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "旗舰",
+    "frequency": 18,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "朋友",
+    "frequency": 17,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "以前",
+    "frequency": 17,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "信赖",
+    "frequency": 17,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "下次",
+    "frequency": 17,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "很棒",
+    "frequency": 16,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "看着",
+    "frequency": 16,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "发货",
+    "frequency": 16,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "很大",
+    "frequency": 16,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "给力",
+    "frequency": 15,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "漂亮",
+    "frequency": 15,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "普通",
+    "frequency": 15,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "支持",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "强劲",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "上档次",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "牌子",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "动力",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "客服",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "入手",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "颜值",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "正品",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "手机",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "白色",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "大气",
+    "frequency": 14,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "直接",
+    "frequency": 13,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "这款",
+    "frequency": 13,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "剃须刀",
+    "frequency": 13,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "优惠",
+    "frequency": 13,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "慢慢",
+    "frequency": 13,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "之后",
+    "frequency": 13,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "配件",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "卖家",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "老公",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "看起来",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "手动",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "合适",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "整体",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "相当",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "看到",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "舒服",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "几天",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "外观",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "期待",
+    "frequency": 12,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "物有所值",
+    "frequency": 11,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "很漂亮",
+    "frequency": 11,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "功能强大",
+    "frequency": 11,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "盒子",
+    "frequency": 11,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一买",
+    "frequency": 11,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "连接",
+    "frequency": 11,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "需要",
+    "frequency": 11,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "用过",
+    "frequency": 11,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "售后",
+    "frequency": 11,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "礼物",
+    "frequency": 11,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "还行",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "挺好用",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "好多",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "老婆",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "出血",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "牙龈",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "不能",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "哈哈哈",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "态度",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "里面",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "相信",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "下单",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "今天",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "手感",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "试用",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一定",
+    "frequency": 10,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "电池",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "评论",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "完美",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "超值",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "完全",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "适应",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "第二次",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "拿到",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "总体",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "明显",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "目前",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "发现",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "晚上",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "坚持",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一点",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "家人",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "送人",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "保护",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "最后",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "基本",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "鸡肋",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "送给",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "及时",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "欧乐",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "高端",
+    "frequency": 9,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "用户",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "继续",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "完好",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "没什么",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "赶上",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "实在",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "还好",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "看看",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "送到",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "配送",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "家里",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "绝对",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "主要",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "噪音",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "选择",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "买来",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "商城",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "电动",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "正好",
+    "frequency": 8,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "感受",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "打开",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "必要",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "套装",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "愉快",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "想象",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "降价",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一起",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "还会",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "热情",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "原来",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "服务态度",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "型号",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "口腔",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "积分",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "个人",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "挺不错",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "图片",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "后来",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "内容",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "更好",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "区别",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "时间",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "物美价廉",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "不要",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "本来",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一把",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "好像",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "是不是",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "不少",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "信任",
+    "frequency": 7,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "其实",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "描述",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "父母",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "拥有",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "终于",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "尤其",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "精细",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一天",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "德国",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "我用",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "加上",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "摸索",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "牙石",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "第二天",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "健康",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "不会",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "外表",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "解决",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "设计",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "强大",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "比手",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "试试",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "毕竟",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "质感",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "系列",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "下手",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "麻烦",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "越来越",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "大家",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "仔细",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "玫瑰",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "用处",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "声波",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一如既往",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "棒棒",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "真心",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "对比",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "果断",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "不好",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "精致",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "小哥",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "别人",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "商家",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "洗牙",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "配合",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "几个",
+    "frequency": 6,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "下午",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "只能",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "价钱",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "当天",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "款式",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "真是",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "重要",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "频率",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "订单",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "自营",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "包装盒",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "二手",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "星期",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "两天",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "星战",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "建议",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "本身",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "太棒了",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "开心",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "破损",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "合算",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "唯一",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "电机",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "一人",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "关注",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "每天",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "追评",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "相比",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "三个",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "差不多",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "地方",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "种草",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "敏感",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "居然",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "准备",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "牙膏",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "牙结石",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "好不好",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "光顾",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "必须",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "软件",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "物品",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "不到",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "杠杠",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "旗舰版",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "来说",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "夸张",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "网购",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "是因为",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "受不了",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "多种",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "美观",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "至少",
+    "frequency": 5,
+    "blacklist": 0
+  },
+  {
+    "crawler_id": 100001,
+    "word": "马上",
+    "frequency": 5,
+    "blacklist": 0
+  }]
+
+}
