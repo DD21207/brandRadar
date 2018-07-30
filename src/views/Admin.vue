@@ -19,12 +19,12 @@
         	<div class="content_main">
         		<div>
                     <div>
-                        <label>Campaign Name:</label>
+                        <label>Name:</label>
                         <el-input v-model="campaignName" placeholder="Enter name here" name="campaign"></el-input>
                     </div>
                     <div style="margin-top: 30px;">
                         <label >Website:</label><br>
-                        <el-select v-model="websiteSelect" multiple collapse-tags placeholder="Select" filterable>
+                        <el-select v-model="websiteSelect" multiple  placeholder="Select" filterable>
                         <el-option
                           v-for="item in websiteData"
                           :key="item.name"
@@ -35,7 +35,7 @@
                     </div>
                     <div style="margin-top: 30px;">
                         <label >City:</label><br>
-                        <el-select v-model="citySelect" multiple collapse-tags placeholder="Select" filterable>
+                        <el-select v-model="citySelect" multiple  placeholder="Select" filterable>
                         <el-option
                           v-for="item in cityData"
                           :key="item.name"
@@ -75,7 +75,7 @@
                   v-model="keywords">
                 </el-input>
             </div>
-           <!--  <div class="tips_box">
+            <div class="tips_box">
               <p>please note that keywords format only accept:</p>
               <p>A</p>
               <p>A or B or C</p>
@@ -83,10 +83,10 @@
               <p>(A or B) and C</p>
               <p>A and (B or C)</p>
               <p>(A or B) and (C or D)</p>
-            </div> -->
+            </div>
             <div class="btn_div">
                 <div class="VALIDATE_btn" @click="validate">
-                    VALIDATE
+                    SUMMIT
                 </div>
             </div>
 
@@ -121,7 +121,7 @@ export default {
 		load(){
           this.$http({
               method:'get',
-              url:'http://ec2-52-83-199-126.cn-northwest-1.compute.amazonaws.com.cn:8080/socialcrawler/json/optionList.json',
+              url:url.url+'/json/optionList.json',
               // data:this.selectData1,
           }).then(response =>{
               this.websiteData = response.data.data.website;
@@ -141,7 +141,7 @@ export default {
 
       this.$http({
             method:'post',
-            url:url.url+'/socialcrawler/mission/add.do',
+            url:url.url+'/mission/add.do',
             data:ajaxData
         }).then(response =>{
           if(response.data.status == 0){
@@ -162,7 +162,7 @@ export default {
     logout(){
       this.$http({
           method:'post',
-          url:url.url+'/dtiusercenter/logout.do',
+          url:'http://ec2-52-83-199-126.cn-northwest-1.compute.amazonaws.com.cn:8080/dtiusercenter/logout.do',
       }).then(response =>{
         if(response.data.status == 0){
             this.$router.push('/')

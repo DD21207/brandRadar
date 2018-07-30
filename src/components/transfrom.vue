@@ -70,7 +70,7 @@ import url from '../assets/js/url.js'
           ajaxData.nlpDataList = dataArr;
           this.$http({
               method:'post',
-              url:url.url+'/socialcrawler/nlp/save.do',
+              url:url.url+'/nlp/save.do',
               data:ajaxData
           }).then(response =>{
             if(response.data.status == 0){
@@ -93,7 +93,7 @@ import url from '../assets/js/url.js'
           ajaxData.nlpDataList = dataArr;
           this.$http({
               method:'post',
-              url:url.url+'/socialcrawler/nlp/save.do',
+              url:url.url+'/nlp/save.do',
               data:ajaxData
           }).then(response =>{
             if(response.data.status == 0){

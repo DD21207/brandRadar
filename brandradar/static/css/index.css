@@ -1,0 +1,97 @@
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.custom-tree-node-icon {
+  display: block;
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin: 0 5px 0 0;
+  padding: 3px 5px 0 0;
+  vertical-align: middle;
+}
+
+.custom-tree-node>span {
+  line-height: 29px;
+}
+
+.el-tree-node__content:hover {
+  background: #191919 !important;
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+.el-tree-node:focus>.el-tree-node__content {
+    background-color: #191919 !important;
+}
+
+.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+    background-color: transparent !important;
+    color: #ff346a !important;
+        opacity: 1;
+}
+
+
+.content_div .el-input__inner{
+  background: rgba(29, 29, 29, 0.9) !important;
+  outline: none !important;
+  border: none !important;
+    color: white;
+
+}
+ ::-webkit-input-placeholder { /* WebKit browsers */
+            color:    #fff;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:    #fff;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:    #fff;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:    #fff;
+        }
+
+.content_div .el-date-editor.el-input, .el-date-editor.el-input__inner {
+    width:100% !important;
+    color: white;
+}
+
+.content_div .el-textarea__inner{
+    color: white;
+  font-size: 13px;
+  background: rgba(29, 29, 29, 0.9) !important;
+   outline: none !important;
+  border: none !important;
+
+}
+ ::-webkit-input-placeholder { /* WebKit browsers */
+            color:    #fff;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:    #fff;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:    #fff;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:    #fff;
+        }
+
+.content_div .el-input--suffix .el-input__inner{
+    color: white;
+
+  width: 100% !important;
+}
+
+.content_div .el-select{
+    color: white;
+
+  width: 100%;
+}

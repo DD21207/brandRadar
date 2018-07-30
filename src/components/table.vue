@@ -11,9 +11,11 @@
 	        <i class="el-icon-document" v-if="file(scope.row)"></i>
 	        <i class="iconfont icon-folder" v-if="folder(scope.row)"></i>
 	        <span style="margin-left: 5px" @click="tableClick(scope.row)" >{{ scope.row.name }}</span>
+	        <span @click="editAlert(scope)"><i class="el-icon-edit-outline"></i> </span>
+	        <span @click="deleteAlert(scope)"><i class="el-icon-minus"></i></span>
 	      </template>
 	    </el-table-column>
-	    <el-table-column  label="HANDLE" align="center" width="160">
+	    <el-table-column  label="TASK" align="center" width="160">
 	    	<template slot-scope="scope" style="text-align: center;">
 		        <span class="span_btn" @click="showChart(scope.row)" @mouseover="cursorBTN(scope.row,$event)">Chart</span>	      	
 		        <span class="span_btn" @click="showList(scope.row)" @mouseover="cursorBTN(scope.row,$event)">GraphList</span>	      	
@@ -21,7 +23,6 @@
 	    </el-table-column>
 	    <el-table-column
 	      label="DATE ADDED"
-	      :render-header="renderHeader"
 	      align="center"
 	     >
 	      <template slot-scope="scope">
@@ -29,7 +30,6 @@
 	      </template>
 	    </el-table-column>
 	    <el-table-column
-	      :render-header="renderHeader"
 	      label="DATE MODIFIED"
 	      align="center"
 	     >
@@ -37,7 +37,7 @@
 	        {{scope.row.updateTime}}
 	      </template>
 	    </el-table-column>
-	    <el-table-column
+	    <!-- <el-table-column
 	      label="EDIT"
 	      width="80"
 	      align="center"
@@ -54,7 +54,7 @@
 	      <template slot-scope="scope">
 	        <span @click="deleteAlert(scope)"><i class="el-icon-minus"></i></span>
 	      </template>
-	    </el-table-column>
+	    </el-table-column> -->
 	  </el-table>
 	  <el-dialog
 	  title="Word Cloud"
@@ -158,20 +158,21 @@ import url from '../assets/js/url.js'
 	    	}
 	    },
 	    editAlert(data) {
-	        this.$prompt('请输入新名字', '提示', {
-	          confirmButtonText: '确定',
-	          cancelButtonText: '取消',
+	        this.$prompt('Please enter a new name', 'Tips', {
+	          confirmButtonText: 'Confirm',
+	          cancelButtonText: 'Cancel',
 	        }).then(({ value }) => {
+	        	console.log(data.row)
 	          this.$http({
                     method:'post',
-                    url:url.url+'/socialcrawler/crawler_tree/update_node.do?nodeID='+data.row.ID+'&folderName='+value
+                    url:url.url+'/crawler_tree/update_node.do?nodeID='+data.row.ID+'&folderName='+value
                 }).then(response =>{
                   if(response.data.status == 0){
                      this.$message({
 			            type: 'success',
-			            message: '修改成功!'
+			            message: 'success!'
 			          });
-                     this.$parent.load();
+                     this.$parent.tableNodeClick(data.row);
                      // this.$emit('load',true);
                   }else{
                        this.$message({
@@ -184,26 +185,26 @@ import url from '../assets/js/url.js'
 	        }).catch(() => {
 	          this.$message({
 	            type: 'info',
-	            message: '取消输入'
+	            message: 'Cancel the input!'
 	          });       
 	        });
 	    },
 	    deleteAlert(data) {
-	        this.$confirm('此操作将永久删除该文件夹/文件, 是否继续?', '提示', {
-	          confirmButtonText: '确定',
-	          cancelButtonText: '取消',
+	        this.$confirm('This will permanently delete the folder/file. Do you want to continue?', 'Tips', {
+	          confirmButtonText: 'Confirm',
+	          cancelButtonText: 'Cancel',
 	          type: 'warning'
 	        }).then(() => {
 	        	this.$http({
                     method:'post',
-                    url:url.url+'/socialcrawler/crawler_tree/delete_node.do?nodeID='+data.row.ID
+                    url:url.url+'/crawler_tree/delete_node.do?nodeID='+data.row.ID
                 }).then(response =>{
                   if(response.data.status == 0){
                      this.$message({
 			            type: 'success',
-			            message: '删除成功!'
+			            message: 'Delete successful!'
 			          });
-                     this.$parent.load();
+                     this.$parent.tableNodeClick(data.row);
                      // this.$emit('load',true);
                   }else{
                        this.$message({
@@ -215,22 +216,23 @@ import url from '../assets/js/url.js'
 	        }).catch(() => {
 	          this.$message({
 	            type: 'info',
-	            message: '已取消删除'
+	            message: 'Undelete!'
 	          });          
 	        });
 	    },
 	    showChart(data){
+	    	this.chartData.splice(0,this.chartData.length);
 	    	if(data.crawlerID !=null && data.crawlerStatus == "success"){
 	    		this.chartVisible = true;
 	    		this.$http({
                     method:'post',
-                    url:url.url+'/socialcrawler/nlp/get_word_cloud.do?nodeID='+data.crawlerID
+                    url:url.url+'/nlp/get_word_cloud.do?nodeID='+data.crawlerID
                 }).then(response =>{
                   if(response.data.status == 0){
                   	if(response.data.data.length == 0){
                   		this.$message({
 				            type: 'info',
-				            message: "没有数据！"
+				            message: "No Data!"
 				        });
                   	}else{
                   		// console.log(response.data)
@@ -240,7 +242,7 @@ import url from '../assets/js/url.js'
                   }else{
                        this.$message({
 			            type: 'info',
-			            message: "没有数据！"
+			            message: "No Data!"
 			          });
                   }
                 })
@@ -252,7 +254,7 @@ import url from '../assets/js/url.js'
 	    		this.listVisible = true;
 	    		this.$http({
                     method:'post',
-                    url:url.url+'/socialcrawler/nlp/get.do?nodeID='+data.crawlerID
+                    url:url.url+'/nlp/get.do?nodeID='+data.crawlerID
                 }).then(response =>{
                   if(response.data.status == 0){
                   	this.listData = response.data.data;
@@ -260,7 +262,7 @@ import url from '../assets/js/url.js'
                   }else{
                        this.$message({
 			            type: 'info',
-			            message: "没有数据！"
+			            message: "No Data!"
 			          });
                   }
                 })
@@ -274,7 +276,7 @@ import url from '../assets/js/url.js'
 	    	if(data.crawlerID == null){
 	    	this.$http({
 	            method:'post',
-	            url:url.url+'/socialcrawler/crawler_tree/get_node_list.do?nodeID='+data.ID
+	            url:url.url+'/crawler_tree/get_node_list.do?nodeID='+data.ID
 	        }).then(response =>{
 	          if(response.data.status == 0){
 	            this.data = response.data.data.list;

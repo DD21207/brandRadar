@@ -36,8 +36,9 @@
                 ref="tree"
                 :default-expanded-keys="[1]"
                 highlight-current
+                accordion
                 @node-click="treeNodeClick"
-                :expand-on-click-node="false"
+                :expand-on-click-node="true"
                 :props="defaultProps"
                 :render-content="renderContent">
               </el-tree>
@@ -55,6 +56,11 @@
                   <a href="javascript:;;" class="main-content__header-login" @click="logout">Welcome<span id="pushUserName">, {{username}}</span><span id="logout_btn"> x </span></a>
               </div>
           </header>
+          <div class="main-content-guide">
+            <span v-for="item in nodeSelected">
+                <span></span>
+            </span>
+          </div>
           <div class="main-content-wrapper" v-show="tableShow"> 
             <div class="main-content__objects">
              <!--  <div class="main-content-wrapper-header">
@@ -91,13 +97,13 @@
                 <span class="create_box_header_option" style="background: #d6dfe6">
                  <i class="el-icon-star-off" ></i>
                 </span>
-                <p>BRAND</p>
+                <p>CORPUS</p>
               </div>
             </div>
           </div>
           <div class="create_box_content">
             <div class="create_box_content_input_box">
-              <input type="text" name="folderName" placeholder="NEW FOLDER NAME" v-model="folderName">
+              <input type="text" name="folderName" placeholder="NEW FOLDER/CORPUS NAME" v-model="folderName">
               
             </div>
             <div class="create_element_btn" @click="appendTreeNode">
@@ -166,14 +172,15 @@ export default {
           children: 'children',
           label: 'name'
         },
-        username:'Dand',
+        username:'',
         select:true,
         tableData:[],
         elementVisible:false,
         isLogin:false,
         folderName:"",
-        treeShow:false,
-        tableShow:false
+        treeShow:true,
+        tableShow:true,
+        nodeSelected:["test"]
       }
   	},
   	components: {
@@ -196,13 +203,13 @@ export default {
             this.treeData.splice(0,this.treeData.length);
             this.$http({
                 method:'post',
-                url:url.url+'/socialcrawler/user/get_user_info.do'
+                url:url.url+'/user/get_user_info.do'
             }).then(response =>{
               if(response.data.status == 0){
                 this.username = response.data.data.username;
                 this.$http({
                     method:'post',
-                    url:url.url+'/socialcrawler/crawler_tree/on_load.do'
+                    url:url.url+'/crawler_tree/on_load.do'
                 }).then(response =>{
                   if(response.data.status == 0){
                     this.treeData.push(response.data.data.tree);
@@ -225,7 +232,6 @@ export default {
         }
         data.children.push(newChild);
       },
-
       remove(node, data) {
         const parent = node.parent;
         const children = parent.data.children || parent.data;
@@ -244,7 +250,7 @@ export default {
       treeNodeClick(node, data, store){
         this.$http({
             method:'post',
-            url:url.url+'/socialcrawler/crawler_tree/get_node_list.do?nodeID='+node.ID
+            url:url.url+'/crawler_tree/get_node_list.do?nodeID='+node.ID
         }).then(response =>{
           if(response.data.status == 0){
             this.tableShow = true;
@@ -255,15 +261,20 @@ export default {
           }
         })
       },
-      // getTableData(){
-      //   this.$http({
-      //           method:'get',
-      //           url:'../../static/data/tableData.json',
-      //           // data:this.selectData1,
-      //       }).then(response =>{
-      //           this.tableData = response.data.data
-      //       })
-      // },
+      tableNodeClick(data){
+        this.$http({
+            method:'post',
+            url:url.url+'/crawler_tree/get_node_list.do?nodeID='+data.parentID
+        }).then(response =>{
+          if(response.data.status == 0){
+            this.tableShow = true;
+            this.tableData = response.data.data.list;
+          }else{
+              alert(response.data.msg)
+              // this.$router.push('/login')
+          }
+        })
+      },
       showTreeNode(){
         this.elementVisible = true;
       },
@@ -272,14 +283,14 @@ export default {
         if(node){
           this.$http({
               method:'post',
-              url:url.url+'/socialcrawler/crawler_tree/add_folder.do?parentID='+node.ID+'&folderName='+this.folderName
+              url:url.url+'/crawler_tree/add_folder.do?parentID='+node.ID+'&folderName='+this.folderName
           }).then(response =>{
             if(response.data.status == 0){
               this.elementVisible = false;
               this.tableData = this.treeData.splice(0,this.treeData.length);
               this.$http({
                   method:'post',
-                  url:url.url+'/socialcrawler/crawler_tree/on_load.do'
+                  url:url.url+'/crawler_tree/on_load.do'
               }).then(response =>{
                 if(response.data.status == 0){
                   this.treeData.push(response.data.data.tree);
@@ -295,7 +306,7 @@ export default {
             }
           })
         }else{
-          alert("没有选择父节点！！！");
+          alert("No parent node selected!!!");
           this.elementVisible = false;
         }
       },
@@ -304,14 +315,14 @@ export default {
         if(node){
           this.$router.push({path:'/Admin',query: { parentId: node.ID}})
         }else{
-          alert("没有选择父节点！！！");
+          alert("No parent node selected!!!");
           this.elementVisible = false;
         }
       },
       logout(){
         this.$http({
             method:'post',
-            url:url.url+'/dtiusercenter/logout.do',
+            url:'http://ec2-52-83-199-126.cn-northwest-1.compute.amazonaws.com.cn:8080/dtiusercenter/logout.do',
         }).then(response =>{
           if(response.data.status == 0){
               this.$router.push('/')
@@ -320,11 +331,11 @@ export default {
         })
       },
       showTree(){
-        this.treeShow = !this.treeShow;
-        if(this.treeShow == false){
+        // this.treeShow = !this.treeShow;
+        // if(this.treeShow == false){
 
-          this.tableShow = false;
-        }
+        //   this.tableShow = false;
+        // }
       }
 
     },
