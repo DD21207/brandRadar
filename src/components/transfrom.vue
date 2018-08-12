@@ -77,8 +77,7 @@ import url from '../assets/js/url.js'
                 this.$message({
                   type: 'success',
                   message: "Save Successful!"
-                });
-              
+                }); 
             }else{
                  this.$message({
                   type: 'info',

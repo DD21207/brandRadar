@@ -34,8 +34,8 @@
                 :data="treeData"
                 node-key="ID"
                 ref="tree"
-                :default-expanded-keys="[1]"
-                highlight-current
+                :default-expanded-keys="[4]"
+                :highlight-current="true"
                 accordion
                 @node-click="treeNodeClick"
                 :expand-on-click-node="true"
@@ -57,8 +57,9 @@
               </div>
           </header>
           <div class="main-content-guide">
-            <span v-for="item in nodeSelected">
-                <span></span>
+            <span v-for="(item, index) in nodeSelected">
+                <span v-bind:id="item.ID" class="pathSpan" @click="pathNodeClick(item.ID)">{{item.name}}</span>
+                <i class="el-icon-arrow-right" v-if="index !== nodeSelected.length-1"></i>
             </span>
           </div>
           <div class="main-content-wrapper" v-show="tableShow"> 
@@ -180,7 +181,7 @@ export default {
         folderName:"",
         treeShow:true,
         tableShow:true,
-        nodeSelected:["test"]
+        nodeSelected:[]
       }
   	},
   	components: {
@@ -199,31 +200,72 @@ export default {
     },
     methods:{
 	     load(){
-
+            this.tableData.splice(0,this.tableData.length);
+            this.nodeSelected.splice(0,this.nodeSelected.length);
             this.treeData.splice(0,this.treeData.length);
-            this.$http({
-                method:'post',
-                url:url.url+'/user/get_user_info.do'
-            }).then(response =>{
-              if(response.data.status == 0){
-                this.username = response.data.data.username;
+            let ID = this.$route.query.ID;
+            if(ID &&  ID != " " ){
                 this.$http({
-                    method:'post',
-                    url:url.url+'/crawler_tree/on_load.do'
+                  method:'post',
+                  url:url.url+'/user/get_user_info.do'
                 }).then(response =>{
                   if(response.data.status == 0){
-                    this.treeData.push(response.data.data.tree);
-                    this.tableData = response.data.data.list;
+                    this.username = response.data.data.username;
+                    this.$http({
+                        method:'post',
+                        url:url.url+'/crawler_tree/on_load.do'
+                    }).then(response =>{
+                      if(response.data.status == 0){
+                        this.treeData.push(response.data.data.tree);
+                        this.$http({
+                            method:'post',
+                            url:url.url+'/crawler_tree/get_node_list.do?nodeID='+ID
+                        }).then(response =>{
+                          if(response.data.status == 0){
+                            this.tableShow = true;
+                            this.tableData = response.data.data.list;
+                            this.nodeSelected = response.data.data.path;
+                          }else{
+                              alert(response.data.msg)
+                          }
+                        })
+                      }else{
+                          alert(response.data.msg)
+                          // this.$router.push('/login')
+                      }
+                    })
                   }else{
-                      alert(response.data.msg)
-                      // this.$router.push('/login')
+                      alert("Please Login!")
+                      this.$router.push('/login')
                   }
                 })
-              }else{
-                  alert("Please Login!")
-                  this.$router.push('/login')
-              }
-            })
+            }else{
+              this.$http({
+                  method:'post',
+                  url:url.url+'/user/get_user_info.do'
+                }).then(response =>{
+                  if(response.data.status == 0){
+                    this.username = response.data.data.username;
+                    this.$http({
+                        method:'post',
+                        url:url.url+'/crawler_tree/on_load.do'
+                    }).then(response =>{
+                      if(response.data.status == 0){
+                        this.treeData.push(response.data.data.tree);
+                        this.tableData = response.data.data.list;
+                        // this.nodeSelected =response.data.data.
+                      }else{
+                          alert(response.data.msg)
+                          // this.$router.push('/login')
+                      }
+                    })
+                  }else{
+                      alert("Please Login!")
+                      this.$router.push('/login')
+                  }
+                })
+            }
+           
        },
        append(data) {
         const newChild = { id: id++, label: 'testtest', children: [] };
@@ -248,6 +290,8 @@ export default {
           </span>);
       },
       treeNodeClick(node, data, store){
+        this.tableData.splice(0,this.treeData.length);
+        this.nodeSelected.splice(0,this.nodeSelected.length);
         this.$http({
             method:'post',
             url:url.url+'/crawler_tree/get_node_list.do?nodeID='+node.ID
@@ -255,6 +299,7 @@ export default {
           if(response.data.status == 0){
             this.tableShow = true;
             this.tableData = response.data.data.list;
+            this.nodeSelected = response.data.data.path;
           }else{
               alert(response.data.msg)
               // this.$router.push('/login')
@@ -262,6 +307,8 @@ export default {
         })
       },
       tableNodeClick(data){
+        this.tableData.splice(0,this.treeData.length);
+        this.nodeSelected.splice(0,this.nodeSelected.length);
         this.$http({
             method:'post',
             url:url.url+'/crawler_tree/get_node_list.do?nodeID='+data.parentID
@@ -269,6 +316,24 @@ export default {
           if(response.data.status == 0){
             this.tableShow = true;
             this.tableData = response.data.data.list;
+            this.nodeSelected = response.data.data.path;
+          }else{
+              alert(response.data.msg)
+              // this.$router.push('/login')
+          }
+        })
+      },
+      pathNodeClick(ID){
+        this.tableData.splice(0,this.treeData.length);
+        this.nodeSelected.splice(0,this.nodeSelected.length);
+        this.$http({
+            method:'post',
+            url:url.url+'/crawler_tree/get_node_list.do?nodeID='+ID
+        }).then(response =>{
+          if(response.data.status == 0){
+            this.tableShow = true;
+            this.tableData = response.data.data.list;
+            this.nodeSelected = response.data.data.path;
           }else{
               alert(response.data.msg)
               // this.$router.push('/login')
@@ -336,7 +401,12 @@ export default {
 
         //   this.tableShow = false;
         // }
-      }
+      },
+      getQueryString(name) { 
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+        var r = window.location.search.substr(1).match(reg); 
+        if (r != null) return unescape(r[2]); return null; 
+      } 
 
     },
 }

@@ -71,7 +71,7 @@
                 <el-input
                   type="textarea"
                   :autosize="{ minRows: 4}"
-                  placeholder="Description"
+                  placeholder="Keywords"
                   v-model="keywords">
                 </el-input>
             </div>
@@ -86,7 +86,7 @@
             </div>
             <div class="btn_div">
                 <div class="VALIDATE_btn" @click="validate">
-                    SUMMIT
+                    Submit
                 </div>
             </div>
 
@@ -129,35 +129,55 @@ export default {
           })
 		},
     validate(){
-      var ajaxData = {};
-      ajaxData.parentId = this.$route.query.parentId;
-      ajaxData.campaignName = this.campaignName;
-      ajaxData.filter = {};
-      ajaxData.filter.startDate = this.startDate;
-      ajaxData.filter.endDate = this.endDate;
-      ajaxData.filter.keywords = this.keywords;
-      ajaxData.filter.website = this.websiteSelect.join(";");
-      ajaxData.filter.city = this.citySelect.join(";");
+      var _this = this;
+      var demo = /^[a-zA-Z0-9 \u4e00-\u9fa5]*(?:[(][a-zA-Z0-9 \u4e00-\u9fa5]*[)][a-zA-Z0-9 \u4e00-\u9fa5]*[(][a-zA-Z0-9 \u4e00-\u9fa5]*[)]){0,1}[a-zA-Z0-9 \u4e00-\u9fa5]*$/;
+      var test1 = demo.test(_this.keywords);
+      if(test1 == true){
+          // var arr1 = _this.keywords.match("and"); 
+          // var arr2 = _this.keywords.match("or");
+          // if(arr1.length !=0 ){
+          //   $.each(arr1, function(index, value) {
+          //      var str11 = _this.keywords.charAt(value*1-1);
+          //      var str21 = _this.keywords.charAt(value*1+1);
 
-      this.$http({
-            method:'post',
-            url:url.url+'/mission/add.do',
-            data:ajaxData
-        }).then(response =>{
-          if(response.data.status == 0){
-              this.$message({
-                type: 'success',
-                message: "Save Successful!"
-              });
-              this.$router.push('/home')
-      
-          }else{
-               this.$message({
+          //   })
+          // }
+          var ajaxData = {};
+          ajaxData.parentId = _this.$route.query.parentId;
+          ajaxData.campaignName = _this.campaignName;
+          ajaxData.filter = {};
+          ajaxData.filter.startDate = _this.startDate;
+          ajaxData.filter.endDate = _this.endDate;
+          ajaxData.filter.keywords = _this.keywords;
+          ajaxData.filter.website = _this.websiteSelect.join(";");
+          ajaxData.filter.city = _this.citySelect.join(";");
+
+          _this.$http({
+                method:'post',
+                url:url.url+'/mission/add.do',
+                data:ajaxData
+            }).then(response =>{
+              if(response.data.status == 0){
+                  _this.$message({
+                    type: 'success',
+                    message: "Save Successful!"
+                  });
+                  _this.$router.push({path:'/home',query:{ID:_this.$route.query.parentId}})
+          
+              }else{
+                   _this.$message({
+                    type: 'info',
+                    message: "Save Failed!"
+                  });
+              }
+            })
+      }else{
+        this.$message({
                 type: 'info',
-                message: "Save Failed!"
+                message: "Invalid keyword query format."
               });
-          }
-        })
+      }
+      
     },
     logout(){
       this.$http({

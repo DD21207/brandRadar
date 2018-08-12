@@ -25,9 +25,13 @@
           tooltip: {
             show: true,
           },
-          toolbox: {
-            show: false,
-          },
+           toolbox: {
+        show : true,
+        feature : {
+            saveAsImage : {show: true}
+        },
+        right:"3%"
+    },
           grid: {
             left: '1%',
             right: '1%',

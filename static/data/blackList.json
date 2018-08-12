@@ -1,0 +1,1095 @@
+{
+  "status": 0,
+  "data":
+  {
+    "graphList": [
+    {
+      "crawlerId": 100002,
+      "word": "世界杯",
+      "frequency": 1807,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "姆巴",
+      "frequency": 666,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "​",
+      "frequency": 595,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "竞猜",
+      "frequency": 579,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "~",
+      "frequency": 561,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "法国",
+      "frequency": 391,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "佩",
+      "frequency": 334,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "决赛",
+      "frequency": 333,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "现金",
+      "frequency": 317,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "红包",
+      "frequency": 312,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "克罗地亚",
+      "frequency": 309,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "瓜分",
+      "frequency": 304,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "|",
+      "frequency": 304,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "含",
+      "frequency": 296,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "00",
+      "frequency": 292,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "进球",
+      "frequency": 292,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "参与",
+      "frequency": 286,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "喝彩",
+      "frequency": 285,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "玩",
+      "frequency": 282,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "选择",
+      "frequency": 279,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "分钟",
+      "frequency": 279,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "佩能",
+      "frequency": 278,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "趣味",
+      "frequency": 277,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "赚",
+      "frequency": 276,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "伤停补时",
+      "frequency": 275,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "即可",
+      "frequency": 275,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "动动手",
+      "frequency": 275,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "1523",
+      "frequency": 275,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "优益",
+      "frequency": 275,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "90",
+      "frequency": 275,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "微博中",
+      "frequency": 275,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "C#",
+      "frequency": 275,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "活力",
+      "frequency": 275,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "指",
+      "frequency": 275,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "07",
+      "frequency": 275,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "免费",
+      "frequency": 273,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "##",
+      "frequency": 129,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "法国队",
+      "frequency": 104,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "转发",
+      "frequency": 103,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "日",
+      "frequency": 95,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "秀",
+      "frequency": 10,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "表演",
+      "frequency": 10,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "公司",
+      "frequency": 10,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "助攻",
+      "frequency": 10,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "一台",
+      "frequency": 10,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "55",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "看好",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "时隔",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "FI",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "活动",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "布兰克",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "买",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "酸爽",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "防线",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "话费",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "罗纳尔多",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "!",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "电视",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "奖品",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "后卫",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "洛里",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "足球场",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "寸",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "这位",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "队友",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "名",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "宝宝",
+      "frequency": 9,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "卡拉",
+      "frequency": 8,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "猜",
+      "frequency": 8,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "男孩",
+      "frequency": 8,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "亨利",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "莫过于",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "第一",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "发布",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "粉丝",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "恋",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "一点",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "哥",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "足坛",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "小姐姐",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "场",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "2011",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "记者",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "糟糕",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "魔笛",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "中国",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "忍者神龟",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "纪录",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "惊喜",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "商品",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "两场",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "乌拉圭",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "帝",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "整",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "无与伦比",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "门",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "可爱",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "熊猫",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "经验",
+      "frequency": 4,
+      "blacklist": 0
+    },
+    {
+      "crawlerId": 100002,
+      "word": "一支",
+      "frequency": 4,
+      "blacklist": 0
+    }],
+    "blackList": [
+    {
+      "crawlerId": 100002,
+      "word": "电视",
+      "frequency": 9,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "奖品",
+      "frequency": 9,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "后卫",
+      "frequency": 9,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "洛里",
+      "frequency": 9,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "足球场",
+      "frequency": 9,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "寸",
+      "frequency": 9,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "这位",
+      "frequency": 9,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "队友",
+      "frequency": 9,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "名",
+      "frequency": 9,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "宝宝",
+      "frequency": 9,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "卡拉",
+      "frequency": 8,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "猜",
+      "frequency": 8,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "男孩",
+      "frequency": 8,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "亨利",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "莫过于",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "第一",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "发布",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "粉丝",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "恋",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "一点",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "哥",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "足坛",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "小姐姐",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "场",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "2011",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "记者",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "糟糕",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "魔笛",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "中国",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "忍者神龟",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "纪录",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "惊喜",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "商品",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "两场",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "乌拉圭",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "帝",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "整",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "无与伦比",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "门",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "可爱",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "熊猫",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "经验",
+      "frequency": 4,
+      "blacklist": 1
+    },
+    {
+      "crawlerId": 100002,
+      "word": "一支",
+      "frequency": 4,
+      "blacklist": 1
+    }],
+    "whiteList": [
+    {
+      "crawlerId": 100002,
+      "word": "含",
+      "frequency": 296,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "00",
+      "frequency": 292,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "进球",
+      "frequency": 292,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "参与",
+      "frequency": 286,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "喝彩",
+      "frequency": 285,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "玩",
+      "frequency": 282,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "选择",
+      "frequency": 279,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "分钟",
+      "frequency": 279,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "佩能",
+      "frequency": 278,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "趣味",
+      "frequency": 277,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "赚",
+      "frequency": 276,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "伤停补时",
+      "frequency": 275,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "即可",
+      "frequency": 275,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "动动手",
+      "frequency": 275,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "1523",
+      "frequency": 275,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "优益",
+      "frequency": 275,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "90",
+      "frequency": 275,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "微博中",
+      "frequency": 275,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "C#",
+      "frequency": 275,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "活力",
+      "frequency": 275,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "指",
+      "frequency": 275,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "07",
+      "frequency": 275,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "免费",
+      "frequency": 273,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "##",
+      "frequency": 129,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "法国队",
+      "frequency": 104,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "转发",
+      "frequency": 103,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "日",
+      "frequency": 95,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "秀",
+      "frequency": 10,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "表演",
+      "frequency": 10,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "公司",
+      "frequency": 10,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "助攻",
+      "frequency": 10,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "一台",
+      "frequency": 10,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "55",
+      "frequency": 9,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "看好",
+      "frequency": 9,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "时隔",
+      "frequency": 9,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "FI",
+      "frequency": 9,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "活动",
+      "frequency": 9,
+      "blacklist": 2
+    },
+    {
+      "crawlerId": 100002,
+      "word": "布兰克",
+      "frequency": 9,
+      "blacklist": 2
+    }]
+  }
+}

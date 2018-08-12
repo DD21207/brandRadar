@@ -15,11 +15,21 @@
 	        <span @click="deleteAlert(scope)"><i class="el-icon-minus"></i></span>
 	      </template>
 	    </el-table-column>
-	    <el-table-column  label="TASK" align="center" width="160">
+	    <el-table-column  label="TASK" align="center" width="260">
 	    	<template slot-scope="scope" style="text-align: center;">
-		        <span class="span_btn" @click="showChart(scope.row)" @mouseover="cursorBTN(scope.row,$event)">Chart</span>	      	
-		        <span class="span_btn" @click="showList(scope.row)" @mouseover="cursorBTN(scope.row,$event)">GraphList</span>	      	
+		        <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @click="showChart(scope.row)" @mouseover="cursorBTN(scope.row,$event)">Word Cloud</span>	      	
+		        <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @click="showList(scope.row)" @mouseover="cursorBTN(scope.row,$event)">B/W List</span>
+		        <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @mouseover="cursorBTN(scope.row,$event)" @click="exportList(scope.row)">Export</span>		      	
 		 	</template>
+	    </el-table-column>
+	    <el-table-column
+	      label="No. of Content"
+	      align="center"
+	     >
+	      <template slot-scope="scope">
+	         <i class="el-icon-time" v-if="scope.row.enable == false"></i>
+	         <span  v-if="scope.row.enable == true">{{scope.row.total}}</span>
+	      </template>
 	    </el-table-column>
 	    <el-table-column
 	      label="DATE ADDED"
@@ -71,9 +81,9 @@
 	 <el-dialog
 	  title="List"
 	  :visible.sync="listVisible"
-	  width="550px"
+	  width="90%"
 	  >
-	  <transfrom ref="transfrom" style="min-width: 550px;padding-left: 10px;" :listData="listData"></transfrom>
+	  <transfrom1 ref="transfrom"  :listData="listData1"></transfrom1>
 	  <span slot="footer" class="dialog-footer">
 	    <el-button @click="listVisible = false">Cancel</el-button>
 	    <el-button type="danger" @click="saveList">Save</el-button>
@@ -85,7 +95,9 @@
 
 <script>
 import wordCloud from './wordCloud.vue'
-import transfrom from './transfrom.vue'
+// import transfrom from './transfrom.vue'
+import transfrom1 from './transfrom1.vue'
+
 import url from '../assets/js/url.js'
 
 
@@ -101,12 +113,13 @@ import url from '../assets/js/url.js'
         chartVisible:false,
         listVisible:false,
         chartData:[],
-        listData:{}
+        listData:{},
+        listData1:{}
       }
     },
     components:{
     	wordCloud,
-    	transfrom
+    	transfrom1
     },
     filters:{
     },
@@ -257,7 +270,7 @@ import url from '../assets/js/url.js'
                     url:url.url+'/nlp/get.do?nodeID='+data.crawlerID
                 }).then(response =>{
                   if(response.data.status == 0){
-                  	this.listData = response.data.data;
+                  	this.listData1 = response.data.data;
                     
                   }else{
                        this.$message({
@@ -266,20 +279,53 @@ import url from '../assets/js/url.js'
 			          });
                   }
                 })
+
+             //    this.$http({
+             //        method:'get',
+             //        url:'../../static/data/blackList.json'
+             //    }).then(response =>{
+             //      if(response.data.status == 0){
+             //      	this.listData1 = response.data.data;
+                    
+             //      }else{
+             //           this.$message({
+			          //   type: 'info',
+			          //   message: "No Data!"
+			          // });
+             //      }
+             //    })
 	    	}
 	    },
 	    saveList(){
 	    	this.listVisible = false;
 	    	this.$refs.transfrom.saveList();
 	    },
+	    exportList(data){
+	    	if(data.crawlerID !=null && data.crawlerStatus == "success"){
+	    	this.$http({
+                method:'post',
+                url:url.url+'/user/get_user_info.do'
+            }).then(response =>{
+              if(response.data.status == 0){
+                window.location.href = url.url+'/nlp/export.do?crawlerId='+data.crawlerID;
+              }else{
+                  alert("Please Login!")
+                  this.$router.push('/login')
+              }
+            })
+            }	
+	    },
 	    tableClick(data){
 	    	if(data.crawlerID == null){
+	    	this.$parent.tableData.splice(0,this.$parent.treeData.length);
+        	this.$parent.nodeSelected.splice(0,this.$parent.nodeSelected.length);
 	    	this.$http({
 	            method:'post',
 	            url:url.url+'/crawler_tree/get_node_list.do?nodeID='+data.ID
 	        }).then(response =>{
 	          if(response.data.status == 0){
-	            this.data = response.data.data.list;
+	            this.$parent.tableData = response.data.data.list;
+            	this.$parent.nodeSelected = response.data.data.path;
 	          }else{
 	              alert(response.data.msg)
 	              // this.$router.push('/login')
@@ -351,9 +397,15 @@ import url from '../assets/js/url.js'
 	margin-left: 6px;
 	display: block;
 	float: left;
-	border-bottom:2px solid #ff346a;
+	border-color: transparent;
+	color: grey;
 	padding: 3px 10px;
 	font-size: 12px;
+}
+
+.crawlerSuccess{
+	border-bottom:2px solid #ff346a;
+	color: white;
 }
 .el-dialog__header,.el-dialog__body,.el-dialog__footer{
 	background: #191919;
@@ -367,7 +419,11 @@ import url from '../assets/js/url.js'
 	border-bottom: 1px solid #f1f1f1;
 }
 
+.el-dialog__body{
+	padding-top: 20px;
+	padding-bottom: 20px;
 
+}
 
 .el-dialog__header>span,.el-dialog__header i{
 	color: white;
