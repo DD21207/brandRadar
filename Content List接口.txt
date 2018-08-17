@@ -1,0 +1,118 @@
+Content List 查询 
+
+
+POST http://localhost:8080/content/query.do 
+
+
+input 
+{
+       "keyword":"",  检索keyword ，不传查所有 
+        "blacklist": 0,   0:普通的content list ； 1 ：blacklist 
+        "pageInfo": 
+            {
+                "pageNum": 1,   当前页
+                "pageSize": "10",   页大小
+                "orderBy": ""   排序  黑名单按：bl_updated_at desc
+            }
+        
+}
+
+output 
+
+{
+    "status": 0,
+    "data": {
+        "pageNum": 1,
+        "pageSize": 10,
+        "size": 10,
+        "orderBy": "pub_time desc",
+        "startRow": 1,
+        "endRow": 10,
+        "total": 266,
+        "pages": 27,
+        "list": [
+            {
+                "id": 176,
+                "crawlerId": 100001,
+                "keyword": "芒果台 幻乐之城",
+                "newsId": "36dc5f0a64bae8090164bb1459430214",
+                "pubFrom": null,
+                "pubDate": null,
+                "pubTime": "2018-7-20- 23:58",
+                "sourceUrl": "http://s.weibo.com/weibo/%25E8%258A%2592%25E6%259E%259C%25E5%258F%25B0%2520%25E5%25B9%25BB%25E4%25B9%2590%25E4%25B9%258B%25E5%259F%258E&timescope=custom:2018-07-20:2018-07-21&typeall=1&suball=1&page=5?NODE_SPLIT_INDEX=4264008523666026",
+                "content": "必须要说我弗兰大芒果台的新节目#幻乐之城#是真滴hin好看四位唱演人和王菲的表演跟唱作也都是业务能力超高了另外pick任素汐小姐姐的part全程是起鸡皮疙瘩飙泪的那种​​​ps.仿佛看到了曲库里又要添库存了哈哈哈激动得搓手手​",
+                "blacklist": 0,
+                "uid": null,
+                "nickname": null,
+                "blog": null,
+                "blogIndex": null,
+                "sex": null,
+                "grade": null,
+                "district": null,
+                "birthday": null,
+                "company": null,
+                "education": null,
+                "intro": null,
+                "job": null,
+                "marriage": null,
+                "sexual": null,
+                "tags": null,
+                "registDate": null
+            }
+            ...
+        ],
+        "firstPage": 1,
+        "prePage": 0,
+        "nextPage": 2,
+        "lastPage": 8,
+        "isFirstPage": true,
+        "isLastPage": false,
+        "hasPreviousPage": false,
+        "hasNextPage": true,
+        "navigatePages": 8,
+        "navigatepageNums": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
+    }
+}
+
+
+
+黑名单保存 
+
+
+POST http://localhost:8080/content/blacklist.do 
+
+input 
+{
+	"operation":"in",  in:移入 out：移出
+    "ids":[1,2]  content id 列表 
+  
+
+}
+
+output 
+
+{
+	"status":0 
+}
+
+
+
+手工调用分词任务 
+
+GET http://localhost:8080/mission/startWordCut.do?crawlerId=100001
+
+
+
+
+
+
+

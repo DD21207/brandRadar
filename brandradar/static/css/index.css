@@ -28,70 +28,153 @@
 
 
 .el-tree-node:focus>.el-tree-node__content {
-    background-color: #191919 !important;
+  background-color: #191919 !important;
 }
 
 .el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
-    background-color: transparent !important;
-    color: #ff346a !important;
-        opacity: 1;
+  background-color: transparent !important;
+  color: #ff346a !important;
+  opacity: 1;
 }
 
 
-.content_div .el-input__inner{
+.content_div .el-input__inner {
   background: rgba(29, 29, 29, 0.9) !important;
   outline: none !important;
   border: none !important;
-    color: white;
-
-}
- ::-webkit-input-placeholder { /* WebKit browsers */
-            color:    #fff;
-        }
-        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-            color:    #fff;
-        }
-        ::-moz-placeholder { /* Mozilla Firefox 19+ */
-            color:    #fff;
-        }
-        :-ms-input-placeholder { /* Internet Explorer 10+ */
-            color:    #fff;
-        }
-
-.content_div .el-date-editor.el-input, .el-date-editor.el-input__inner {
-    width:100% !important;
-    color: white;
+  color: white;
 }
 
-.content_div .el-textarea__inner{
-    color: white;
+ ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+
+ :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+
+ ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+
+ :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+
+.content_div .el-date-editor.el-input,
+.el-date-editor.el-input__inner {
+  width: 100% !important;
+  color: white;
+}
+
+.content_div .el-textarea__inner {
+  color: white;
   font-size: 13px;
   background: rgba(29, 29, 29, 0.9) !important;
-   outline: none !important;
+  outline: none !important;
   border: none !important;
-
 }
- ::-webkit-input-placeholder { /* WebKit browsers */
-            color:    #fff;
-        }
-        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-            color:    #fff;
-        }
-        ::-moz-placeholder { /* Mozilla Firefox 19+ */
-            color:    #fff;
-        }
-        :-ms-input-placeholder { /* Internet Explorer 10+ */
-            color:    #fff;
-        }
 
-.content_div .el-input--suffix .el-input__inner{
-    color: white;
+ ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+
+ :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+
+ ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+
+ :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+
+.content_div .el-input--suffix .el-input__inner {
+  color: white;
 
   width: 100% !important;
 }
 
-.content_div .el-select{
-    color: white;
+.content_div .el-select {
+  color: white;
 
   width: 100%;
+}
+
+
+
+.el-input__inner {
+  -webkit-appearance: none;
+  background-color: transparent !important;
+  border-radius: 4px;
+  border: 1px solid white !important;
+  border-right: 0px !important;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white !important;
+  display: inline-block;
+  font-size: inherit;
+  height: 22px !important;
+  line-height: 22px;
+  outline: 0;
+  padding: 0 15px;
+  -webkit-transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+  transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+  width: 100%;
+}
+
+.el-input-group__append,
+.el-input-group__prepend {
+  background-color: transparent !important;
+  color: white !important;
+  vertical-align: middle;
+  display: table-cell;
+  position: relative;
+  border: 1px solid white !important;
+  border-left: 0px !important;
+  border-radius: 4px;
+  padding: 0 10px !important;
+  width: 1px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+
+.el-pagination {
+  width: auto;
+}
+
+.el-pager li:hover {
+  color: #e91f63 !important;
+}
+
+.el-pager li.active {
+  color: #e91f63 !important;
+}
+
+.el-dialog,
+.el-pager li {
+  background: transparent !important;
+  color: white;
+  -webkit-box-sizing: border-box;
+}
+
+
+.el-pagination .btn-next,
+.el-pagination .btn-prev {
+  background: transparent !important;
+  background-size: 16px;
+  cursor: pointer;
+  margin: 0;
+  color: white !important;
 }

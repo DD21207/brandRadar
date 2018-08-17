@@ -19,7 +19,9 @@
 	    	<template slot-scope="scope" style="text-align: center;">
 		        <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @click="showChart(scope.row)" @mouseover="cursorBTN(scope.row,$event)">Word Cloud</span>	      	
 		        <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @click="showList(scope.row)" @mouseover="cursorBTN(scope.row,$event)">B/W List</span>
-		        <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @mouseover="cursorBTN(scope.row,$event)" @click="exportList(scope.row)">Export</span>		      	
+		        <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @mouseover="cursorBTN(scope.row,$event)" @click="exportList(scope.row)">Export</span>
+		         <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @mouseover="cursorBTN(scope.row,$event)" @click="gotoContent(scope.row)">Content List</span>
+		         <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @mouseover="cursorBTN(scope.row,$event)" @click="wordCut(scope.row)">Word Cut</span>   	
 		 	</template>
 	    </el-table-column>
 	    <el-table-column
@@ -83,7 +85,7 @@
 	  :visible.sync="listVisible"
 	  width="90%"
 	  >
-	  <transfrom1 ref="transfrom"  :listData="listData1"></transfrom1>
+	  <transfrom1 ref="transfrom"  :listData="listData1" :crawlerID="crawlerID"></transfrom1>
 	  <span slot="footer" class="dialog-footer">
 	    <el-button @click="listVisible = false">Cancel</el-button>
 	    <el-button type="danger" @click="saveList">Save</el-button>
@@ -114,7 +116,8 @@ import url from '../assets/js/url.js'
         listVisible:false,
         chartData:[],
         listData:{},
-        listData1:{}
+        listData1:{},
+        crawlerID:0
       }
     },
     components:{
@@ -271,7 +274,8 @@ import url from '../assets/js/url.js'
                 }).then(response =>{
                   if(response.data.status == 0){
                   	this.listData1 = response.data.data;
-                    
+                  	console.log(data.crawlerID)
+                    this.crawlerID = data.crawlerID;
                   }else{
                        this.$message({
 			            type: 'info',
@@ -351,6 +355,17 @@ import url from '../assets/js/url.js'
 	    	}else{
 	    		$event.currentTarget.style.cursor = "not-allowed"
 	    	}
+	    },
+	    gotoContent(data){
+	    	this.$router.push({path:"/contentList",query:{crawlerID:data.crawlerID,parentID:data.parentID}})
+	    },
+	    wordCut(data){
+	    	console.log(data)
+	    	this.$http({
+	            method:'get',
+	            url:url.url+'/mission/startWordCut.do?crawlerId='+data.crawlerID
+	        }).then(response =>{
+	        })
 	    }
 	}
   }

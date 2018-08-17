@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from '@/views/Home'
 import Login from '@/views/Login'
 import Admin from '@/views/Admin'
+import Content from '@/views/Content'
+
 
 
 
@@ -32,5 +34,9 @@ export default new Router({
     path:'/admin',
     name:'Admin',
     component:Admin
+  },{
+    path:'/contentList',
+    name:'Content',
+    component:Content
   }]
 })

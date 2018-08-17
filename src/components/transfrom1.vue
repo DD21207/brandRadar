@@ -1,5 +1,5 @@
 <template>
-  <div :listData='listData'>
+  <div :listData='listData' :crawlerID='crawlerID'>
       <div class="list_box">
         <div class="list_box_item">
           <div class="list_box_item_header">
@@ -12,7 +12,6 @@
                   <span class="el-icon-plus" @click="addWhiteList(item,index,0)"></span>
                   <span class="el-icon-minus" @click="addBlackList(item,index,0)"></span>
                 </div>
-                
               </div>
           </div>
         </div>
@@ -57,7 +56,8 @@ import url from '../assets/js/url.js'
     props: {
       listData: {
         
-      }
+      },
+      crawlerID:Number
     },
     data() {
       return {
@@ -130,6 +130,7 @@ import url from '../assets/js/url.js'
               method:'post',
               url:url.url+'/nlp/save.do',
               data:{
+                "crawlerId": this.crawlerID,
                 "blackList": this.blackList,
                 "whiteList": this.whiteList
               }
