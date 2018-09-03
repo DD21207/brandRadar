@@ -12,8 +12,7 @@
           <header class="main_sidebar_header">
             <div class="C_logo">
               <img src="../assets/img/20180716_16.png" alt="" width="80%">
-              <br>
-              <img src="../assets/img/btn.png" alt="" height="22px" style="margin-top: 30px;" @click="showTree">
+              
             </div>
           </header>
           <!-- button组 -->
@@ -229,11 +228,17 @@ export default {
                               alert(response.data.msg)
                           }
                         })
+                      }else if(response.data.msg == "NEED_LOGIN"){
+                          alert(response.data.msg)
+                          this.$router.push('/login')
                       }else{
                           alert(response.data.msg)
                           // this.$router.push('/login')
                       }
                     })
+                  }else if(response.data.msg == "NEED_LOGIN"){
+                      alert(response.data.msg)
+                      this.$router.push('/login')
                   }else{
                       alert("Please Login!")
                       this.$router.push('/login')
@@ -254,12 +259,18 @@ export default {
                         this.treeData.push(response.data.data.tree);
                         this.tableData = response.data.data.list;
                         // this.nodeSelected =response.data.data.
+                      }else if(response.data.msg == "NEED_LOGIN"){
+                          alert(response.data.msg)
+                          this.$router.push('/login')
                       }else{
                           alert(response.data.msg)
                           // this.$router.push('/login')
                       }
                     })
-                  }else{
+                  }else if(response.data.msg == "NEED_LOGIN"){
+                      alert(response.data.msg)
+                      this.$router.push('/login')
+                }else{
                       alert("Please Login!")
                       this.$router.push('/login')
                   }
@@ -300,6 +311,9 @@ export default {
             this.tableShow = true;
             this.tableData = response.data.data.list;
             this.nodeSelected = response.data.data.path;
+          }else if(response.data.msg == "NEED_LOGIN"){
+              alert(response.data.msg)
+              this.$router.push('/login')
           }else{
               alert(response.data.msg)
               // this.$router.push('/login')
@@ -317,6 +331,9 @@ export default {
             this.tableShow = true;
             this.tableData = response.data.data.list;
             this.nodeSelected = response.data.data.path;
+          }else if(response.data.msg == "NEED_LOGIN"){
+              alert(response.data.msg)
+              this.$router.push('/login')
           }else{
               alert(response.data.msg)
               // this.$router.push('/login')
@@ -334,6 +351,9 @@ export default {
             this.tableShow = true;
             this.tableData = response.data.data.list;
             this.nodeSelected = response.data.data.path;
+          }else if(response.data.msg == "NEED_LOGIN"){
+              alert(response.data.msg)
+              this.$router.push('/login')
           }else{
               alert(response.data.msg)
               // this.$router.push('/login')
@@ -360,18 +380,24 @@ export default {
                 if(response.data.status == 0){
                   this.treeData.push(response.data.data.tree);
                   this.tableData = response.data.data.list;
+                }else if(response.data.msg == "NEED_LOGIN"){
+                    alert(response.data.msg)
+                    this.$router.push('/login')
                 }else{
                     alert(response.data.msg)
                     // this.$router.push('/login')
                 }
               })
+            }else if(response.data.msg == "NEED_LOGIN"){
+              alert(response.data.msg)
+              this.$router.push('/login')
             }else{
                 alert(response.data.msg)
                 // this.$router.push('/login')
             }
           })
         }else{
-          alert("No parent node selected!!!");
+          alert("Please choose one folder before you create a mission.");
           this.elementVisible = false;
         }
       },
@@ -380,7 +406,7 @@ export default {
         if(node){
           this.$router.push({path:'/Admin',query: { parentId: node.ID}})
         }else{
-          alert("No parent node selected!!!");
+          alert("Please choose one folder before you create a mission.");
           this.elementVisible = false;
         }
       },
@@ -391,7 +417,9 @@ export default {
         }).then(response =>{
           if(response.data.status == 0){
               this.$router.push('/')
-      
+          }else if(response.data.msg == "NEED_LOGIN"){
+              alert(response.data.msg)
+              this.$router.push('/login')
           }
         })
       },

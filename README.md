@@ -1,4 +1,4 @@
-# bmw
+# brandRadar
 
 > A Vue.js project
 
@@ -17,5 +17,12 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+
+上线之前更改
+
+url.js 请求地址
+index.html  meta base
+router  index.js  base
+config   index.js  build配置
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

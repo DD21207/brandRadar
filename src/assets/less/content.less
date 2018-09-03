@@ -16,11 +16,15 @@ body {
   fill: currentColor;
   overflow: hidden;
 }
+.classClick{
+  // border-bottom: 2px solid @main_color;
+  background:  @main_color;
+  // color:black;
+}
 
 #div_body {
   width: 100%;
-  height: 100%;
-  // min-height: 100%;
+  height: 100%; // min-height: 100%;
   overflow-x: scroll;
   margin: 0;
   padding: 0;
@@ -38,44 +42,66 @@ body {
     width: 270px;
     padding: 10px 10px;
 
-    .total_box{
+    .total_box {
       width: 250px;
       border-radius: 5px;
-      border:1px solid white;
-      height:auto;
-      overflow-y: scroll;
-      padding: 10px;
-      .total_box_item{
-        >div{
+      border: 1px solid white;
+      height: auto;
+      max-height: 250px;
+      overflow: scroll;
+      padding: 10px 1px 10px 5px;
+      .total_box_item {
+        font-size: 12px;
+        height: auto;
+        display: block;
+        padding: 0  5px 0 5px;
+
+        >div {
           float: left;
-          width: 45%;
+          width: 50%;
+          word-break: break-all;
+          word-wrap: break-word;
         }
       }
+      .clearfloat:after {
+        display: block;
+        clear: both;
+        content: "";
+        visibility: hidden;
+        height: 0
+      }
+      .clearfloat {
+        zoom: 1
+      }
     }
-    .detail_box{
+    .detail_box {
       height: auto;
       width: 250px;
       min-height: 400px;
       background: white;
       margin-top: 50px;
       border-radius: 5px;
-      padding:10px 20px;
-      .detail_title{
-        font-size: 15px;
+      padding: 10px 20px;
+      .detail_title {
+        font-size: 16px;
         font-weight: bold;
-        color:@main_color;
+        color: @main_color;
         margin-top: 30px;
       }
-      .detail_content{
-        font-size: 13px;
+      .detail_content {
+        font-size: 12px;
         color: black;
+      }
+
+      .link_hover:hover {
+        text-decoration: underline;
+        color: @main_color;
       }
     }
   }
   .content_box {
     min-width: 530px;
-    height: 100%;
-    // position: relative;
+    height: 100%; // position: relative;
     flex: 3;
     -webkit-flex: 3;
     -ms-flex: 3;
@@ -86,11 +112,11 @@ body {
     height: 100%;
     margin-right: 10px;
     padding-top: 20%;
-    >div{
+    >div {
       width: 100%;
       margin-bottom: 60px;
-      text-align:center;
-      img{
+      text-align: center;
+      img {
         width: 15px;
       }
     }
@@ -106,71 +132,76 @@ body {
     width: 100%;
     height: 25px;
     line-height: 25px;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
     text-align: left;
     color: @main_color;
     >img {
-      height: 11px;
-      margin-top: -3px;
+      height: 14px;
+      margin-top: -4px;
       margin-right: 5px;
     }
-    
   }
   .select_box {
     width: 100%;
-    height: 22px;
+    height: 40px;
     .select_box_item {
       width: 190px;
       height: 22px;
       margin: 10px 24px;
       display: inline-block;
-
     }
-    .title_total{
-        font-size: 12px;
-        color: #ddd;
-      }
+    .title_total {
+      font-size: 12px;
+      color: #ddd;
+      display: inline-block;
+      margin-left: 5px; // position: absolute;
+    }
   }
 
   .list_box {
     width: 100%;
     overflow-y: scroll;
     height: 84%;
-    margin-top: 20px;
+    margin-top: 15px;
     .list_box_title {
       height: 20px;
-      line-height: 20px;
-      font-size: 15px;
+      line-height: 20px; // font-size: 15px;
       color: @main_color;
-      
+      .content_span {
+        font-size: 18px;
+        text-align: center;
+      }
+      .date_span {
+        font-size: 18px;
+      }
     }
     .list_box_content {
       .list_box_content_item {
         width: 100%;
         height: 20px;
         line-height: 20px;
-        font-size: 13px;
+        font-size: 12px;
         color: white;
         margin-top: 5px;
       }
     }
     .content_span {
       float: left;
-      width:400px;
+      width: 350px;
       padding-right: 10px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
       >img {
-        width: 15px;
+        width: 13px;
         margin-right: 10px;
-        margin-top: -3px;
+        margin-top: -1px;
       }
     }
     .date_span {
       float: right;
-      width: 80px;
+      width: 130px;
       text-align: center;
     }
   }
@@ -178,27 +209,32 @@ body {
     width: 100%;
     overflow-y: scroll;
     height: 84%;
-    margin-top: 20px;
+    margin-top: 15px;
     .list_box_title {
       height: 20px;
-      line-height: 20px;
-      font-size: 15px;
+      line-height: 20px; // font-size: 15px;
       color: @main_color;
-      
+      .content_span {
+        font-size: 18px;
+        text-align: center;
+      }
+      .date_span {
+        font-size: 18px;
+      }
     }
     .list_box_content {
       .list_box_content_item {
         width: 100%;
         height: 20px;
         line-height: 20px;
-        font-size: 13px;
+        font-size: 12px;
         color: white;
         margin-top: 5px;
       }
     }
     .content_span {
       float: left;
-      width:250px;
+      width: 200px;
       padding-right: 10px;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -211,18 +247,18 @@ body {
     }
     .date_span {
       float: right;
-      width: 80px;
+      width: 130px;
       text-align: center;
     }
   }
-  .pagination_box{
+  .pagination_box {
     margin-bottom: 2%;
     text-align: center;
   }
-  .confirm_box{
+  .confirm_box {
     height: 40px;
     width: 100%;
-    .confirm_btn{
+    .confirm_btn {
       width: 150px;
       height: 25px;
       line-height: 25px;
@@ -232,4 +268,18 @@ body {
       margin: 0 auto;
     }
   }
+
+  .close_box {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 40px;
+    >img {
+      width: 100%;
+    }
+  }
+}
+
+.source_hover:hover {
+  text-decoration: underline;
 }

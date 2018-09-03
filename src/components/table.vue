@@ -21,7 +21,7 @@
 		        <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @click="showList(scope.row)" @mouseover="cursorBTN(scope.row,$event)">B/W List</span>
 		        <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @mouseover="cursorBTN(scope.row,$event)" @click="exportList(scope.row)">Export</span>
 		         <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @mouseover="cursorBTN(scope.row,$event)" @click="gotoContent(scope.row)">Content List</span>
-		         <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @mouseover="cursorBTN(scope.row,$event)" @click="wordCut(scope.row)">Word Cut</span>   	
+		         <span class="span_btn" v-bind:class="{ 'crawlerSuccess': scope.row.enable}" @mouseover="cursorBTN(scope.row,$event)" @click="wordCut(scope.row)">Stemming</span>   	
 		 	</template>
 	    </el-table-column>
 	    <el-table-column
@@ -29,8 +29,8 @@
 	      align="center"
 	     >
 	      <template slot-scope="scope">
-	         <i class="el-icon-time" v-if="scope.row.enable == false"></i>
-	         <span  v-if="scope.row.enable == true">{{scope.row.total}}</span>
+	         <i class="el-icon-time" v-if="totalClock(scope.row,0)"></i>
+	         <span  v-if="totalClock(scope.row,1)">{{scope.row.total}}</span>
 	      </template>
 	    </el-table-column>
 	    <el-table-column
@@ -83,11 +83,12 @@
 	 <el-dialog
 	  title="List"
 	  :visible.sync="listVisible"
-	  width="90%"
+	  width="1200px"
+	  top="30px"
 	  >
 	  <transfrom1 ref="transfrom"  :listData="listData1" :crawlerID="crawlerID"></transfrom1>
 	  <span slot="footer" class="dialog-footer">
-	    <el-button @click="listVisible = false">Cancel</el-button>
+	    <!-- <el-button @click="listVisible = false">Cancel</el-button> -->
 	    <el-button type="danger" @click="saveList">Save</el-button>
 	  </span>
 	</el-dialog>
@@ -146,17 +147,20 @@ import url from '../assets/js/url.js'
 	        console.log(index, row);
 	    },
 	    error(data){
-	      	if(data.crawlerStatus != "crawling" && data.crawlerStatus != "success" && data.crawlerStatus != null){
+	      	if(data.crawlerID !=null && data.crawlerStatus == "error"){
 	      		return true;
 	      	}else{
 	      		return false;
 	      	}
 	    },
 	    crawler(data){
-	      	if(data.crawlerID !=null && data.crawlerStatus == "crawling"){
-	      		return true;
-	      	}else{
+	      	if(data.crawlerID !=null && data.crawlerStatus == "error" ){
 	      		return false;
+	      	}else if( data.crawlerID !=null && data.crawlerStatus == "success"){
+	      		return false;
+
+	      	}else{
+	      		return true;
 	      	}
 	    },
 	    folder(data){
@@ -177,6 +181,7 @@ import url from '../assets/js/url.js'
 	        this.$prompt('Please enter a new name', 'Tips', {
 	          confirmButtonText: 'Confirm',
 	          cancelButtonText: 'Cancel',
+	          inputValue: data.row.name
 	        }).then(({ value }) => {
 	        	console.log(data.row)
 	          this.$http({
@@ -190,7 +195,10 @@ import url from '../assets/js/url.js'
 			          });
                      this.$parent.tableNodeClick(data.row);
                      // this.$emit('load',true);
-                  }else{
+                  }else if(response.data.msg == "NEED_LOGIN"){
+		              alert(response.data.msg)
+		              this.$router.push('/login')
+		          }else{
                        this.$message({
 			            type: 'info',
 			            message: response.data.data
@@ -204,6 +212,21 @@ import url from '../assets/js/url.js'
 	            message: 'Cancel the input!'
 	          });       
 	        });
+	    },
+	    totalClock(data,status){
+	    	if( status == 0){
+	    		if(data.crawlerStatus == "success" || data.crawlerStatus == "error"){
+	    			return false;
+	    		}else{
+	    			return true;
+	    		}
+	    	}else if( status == 1){
+	    		if(data.crawlerStatus == "success" || data.crawlerStatus == "error"){
+	    			return true;
+	    		}else{
+	    			return false;
+	    		}
+	    	}
 	    },
 	    deleteAlert(data) {
 	        this.$confirm('This will permanently delete the folder/file. Do you want to continue?', 'Tips', {
@@ -222,7 +245,10 @@ import url from '../assets/js/url.js'
 			          });
                      this.$parent.tableNodeClick(data.row);
                      // this.$emit('load',true);
-                  }else{
+                  }else if(response.data.msg == "NEED_LOGIN"){
+		              alert(response.data.msg)
+		              this.$router.push('/login')
+		          }else{
                        this.$message({
 			            type: 'info',
 			            message: response.data.data
@@ -250,7 +276,10 @@ import url from '../assets/js/url.js'
 				            type: 'info',
 				            message: "No Data!"
 				        });
-                  	}else{
+                  	}else if(response.data.msg == "NEED_LOGIN"){
+		              alert(response.data.msg)
+		              this.$router.push('/login')
+		          }else{
                   		// console.log(response.data)
                   		this.chartData = response.data.data;
                   	}
@@ -266,38 +295,28 @@ import url from '../assets/js/url.js'
 	    	
 	    },
 	    showList(data){
+	    	this.crawlerID = 0;
 	    	if(data.crawlerID !=null && data.crawlerStatus == "success"){
 	    		this.listVisible = true;
+
 	    		this.$http({
                     method:'post',
                     url:url.url+'/nlp/get.do?nodeID='+data.crawlerID
                 }).then(response =>{
                   if(response.data.status == 0){
-                  	this.listData1 = response.data.data;
-                  	console.log(data.crawlerID)
+                  	// this.listData1 = response.data.data;
+                  	// console.log(data.crawlerID)
                     this.crawlerID = data.crawlerID;
-                  }else{
+                  }else if(response.data.msg == "NEED_LOGIN"){
+		              alert(response.data.msg)
+		              this.$router.push('/login')
+		          }else{
                        this.$message({
 			            type: 'info',
 			            message: "No Data!"
 			          });
                   }
                 })
-
-             //    this.$http({
-             //        method:'get',
-             //        url:'../../static/data/blackList.json'
-             //    }).then(response =>{
-             //      if(response.data.status == 0){
-             //      	this.listData1 = response.data.data;
-                    
-             //      }else{
-             //           this.$message({
-			          //   type: 'info',
-			          //   message: "No Data!"
-			          // });
-             //      }
-             //    })
 	    	}
 	    },
 	    saveList(){
@@ -305,18 +324,21 @@ import url from '../assets/js/url.js'
 	    	this.$refs.transfrom.saveList();
 	    },
 	    exportList(data){
-	    	if(data.crawlerID !=null && data.crawlerStatus == "success"){
-	    	this.$http({
-                method:'post',
-                url:url.url+'/user/get_user_info.do'
-            }).then(response =>{
-              if(response.data.status == 0){
-                window.location.href = url.url+'/nlp/export.do?crawlerId='+data.crawlerID;
-              }else{
-                  alert("Please Login!")
-                  this.$router.push('/login')
-              }
-            })
+		    if(data.crawlerID !=null && data.crawlerStatus == "success"){
+		    	this.$http({
+	                method:'post',
+	                url:url.url+'/user/get_user_info.do'
+	            }).then(response =>{
+	              if(response.data.status == 0){
+	                window.location.href = url.url+'/nlp/export.do?crawlerId='+data.crawlerID;
+	              }else if(response.data.msg == "NEED_LOGIN"){
+		              alert(response.data.msg)
+		              this.$router.push('/login')
+		          }else{
+	                  alert("Please Login!")
+	                  this.$router.push('/login')
+	              }
+	            })
             }	
 	    },
 	    tableClick(data){
@@ -330,6 +352,9 @@ import url from '../assets/js/url.js'
 	          if(response.data.status == 0){
 	            this.$parent.tableData = response.data.data.list;
             	this.$parent.nodeSelected = response.data.data.path;
+	          }else if(response.data.msg == "NEED_LOGIN"){
+	              alert(response.data.msg)
+	              this.$router.push('/login')
 	          }else{
 	              alert(response.data.msg)
 	              // this.$router.push('/login')
@@ -357,15 +382,23 @@ import url from '../assets/js/url.js'
 	    	}
 	    },
 	    gotoContent(data){
-	    	this.$router.push({path:"/contentList",query:{crawlerID:data.crawlerID,parentID:data.parentID}})
+	    	if(data.crawlerID !=null && data.crawlerStatus == "success"){
+	    		this.$router.push({path:"/contentList",query:{crawlerID:data.crawlerID,parentID:data.parentID}})
+	    	}
 	    },
 	    wordCut(data){
-	    	console.log(data)
-	    	this.$http({
-	            method:'get',
-	            url:url.url+'/mission/startWordCut.do?crawlerId='+data.crawlerID
-	        }).then(response =>{
-	        })
+	    	if(data.crawlerID !=null && data.crawlerStatus == "success"){
+		    	this.$http({
+		            method:'get',
+		            url:url.url+'/mission/startWordCut.do?crawlerId='+data.crawlerID
+		        }).then(response =>{
+		        	this.$message({
+				            type: 'success',
+				            message: "Graph List already updated."
+				          });
+
+		        })
+	    	}	
 	    }
 	}
   }

@@ -13,7 +13,11 @@ import Content from '@/views/Content'
 Vue.use(Router)
 
 export default new Router({
+  //上线
   base:'/brandradar/',
+
+  //test   
+  // base:'/testbrandradar/',
   mode: 'history',
   routes: [{
     path: '/',

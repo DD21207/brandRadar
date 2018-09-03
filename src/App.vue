@@ -22,7 +22,7 @@ body,html {
   box-sizing: border-box;
 }
 #app {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto", "微软雅黑" !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;

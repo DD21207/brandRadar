@@ -29,7 +29,7 @@
                           v-for="item in websiteData"
                           :key="item.name"
                           :label="item.name"
-                          :value="item.name">
+                          :value="item.fullname">
                         </el-option>
                       </el-select>
                     </div>
@@ -121,35 +121,57 @@ export default {
 		load(){
           this.$http({
               method:'get',
-              url:url.url+'/json/optionList.json',
+              url:url.url+'/mission/optionList.do',
+              headers: {
+                  'Content-type': 'application/json'
+              },
               // data:this.selectData1,
           }).then(response =>{
-              this.websiteData = response.data.data.website;
-              this.cityData = response.data.data.city;
+            if(  typeof(response.data) == "string"){
+               var data = $.parseJSON( response.data );
+            }
+              var data = response.data;
+              this.websiteData =data.data.website;
+              this.cityData = data.data.city;
+              console.log(data)
           })
-		},
+
+          // this.$http({
+          //     method:'get',
+          //     url:url.url+'/json/optionList.json',
+          //     // data:this.selectData1,
+          // }).then(response =>{
+          //     this.cityData = response.data.data.city;
+          // })
+
+          
+		},  
     validate(){
       var _this = this;
+      var keywords = _this.keywords;
+      keywords = keywords.replace(/[\r\n]/g, " ");
+      console.log(keywords)
       var demo = /^[a-zA-Z0-9 \u4e00-\u9fa5]*(?:[(][a-zA-Z0-9 \u4e00-\u9fa5]*[)][a-zA-Z0-9 \u4e00-\u9fa5]*[(][a-zA-Z0-9 \u4e00-\u9fa5]*[)]){0,1}[a-zA-Z0-9 \u4e00-\u9fa5]*$/;
-      var test1 = demo.test(_this.keywords);
-      if(test1 == true){
-          // var arr1 = _this.keywords.match("and"); 
-          // var arr2 = _this.keywords.match("or");
-          // if(arr1.length !=0 ){
-          //   $.each(arr1, function(index, value) {
-          //      var str11 = _this.keywords.charAt(value*1-1);
-          //      var str21 = _this.keywords.charAt(value*1+1);
+      var test1 = demo.test(keywords);
 
-          //   })
-          // }
+      if(test1 == true){
+
           var ajaxData = {};
           ajaxData.parentId = _this.$route.query.parentId;
           ajaxData.campaignName = _this.campaignName;
           ajaxData.filter = {};
           ajaxData.filter.startDate = _this.startDate;
           ajaxData.filter.endDate = _this.endDate;
-          ajaxData.filter.keywords = _this.keywords;
-          ajaxData.filter.website = _this.websiteSelect.join(";");
+          ajaxData.filter.keywords = keywords;
+          if(_this.websiteSelect.length !=0){
+            ajaxData.filter.website = _this.websiteSelect.join(";");
+          }else{
+            var arr1 = [];
+            $.each(_this.websiteData,function(index,value){
+              arr1.push(value.fullname)
+            })
+            ajaxData.filter.website = arr1.join(";");
+          }   
           ajaxData.filter.city = _this.citySelect.join(";");
 
           _this.$http({
@@ -164,6 +186,9 @@ export default {
                   });
                   _this.$router.push({path:'/home',query:{ID:_this.$route.query.parentId}})
           
+              }else if(response.data.msg == "NEED_LOGIN"){
+                  alert(response.data.msg)
+                  this.$router.push('/login')
               }else{
                    _this.$message({
                     type: 'info',
@@ -187,7 +212,10 @@ export default {
         if(response.data.status == 0){
             this.$router.push('/')
     
-        }
+        }else if(response.data.msg == "NEED_LOGIN"){
+              alert(response.data.msg)
+              this.$router.push('/login')
+          }
       })
     },
     gotoHome(){
